@@ -1,0 +1,44 @@
+body {
+  background-color: blue;
+}
+
+.circle-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.outer-circle {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.inner-circle {
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.circle-container:hover {
+  cursor: pointer;
+}
