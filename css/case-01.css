@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+}
+
+.box-container {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  position: fixed;
+  top: 50px;
+  width: 60px;
+  height: 70vh;
+  padding-top: 20px;
+  left: -15px;
+}
+
+.menu-bar {
+  width: 80px;
+  height: 40px;
+  background-color: blueviolet;
+  box-shadow: 0 0 8px gray;
+  transition: width 0.5s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.menu-bar:hover {
+  width: 150px;
+}
+
+.image {
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+  align-items: end;
+}
+
+.menu {
+  display: none;
+  margin-left: 10px;
+  color: white;
+}
+
+.menu-bar:hover .menu {
+  display: inline;
+}
