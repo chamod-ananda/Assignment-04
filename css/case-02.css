@@ -1,44 +1,48 @@
 body {
-  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(42, 42, 207);
 }
 
 .circle-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.outer-circle {
-  width: 340px;
-  height: 340px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  background-color: white;
-}
-
-.inner-circle {
-  width: 310px;
-  height: 310px;
-  border-radius: 50%;
-  background-color: gray;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
   color: white;
-  text-align: center;
-}
-
-span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
   font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
 }
 
-.circle-container:hover {
-  cursor: pointer;
+.circle-container::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 10px solid white;
+  border-top: 10px solid red;
+  animation: none;
+  transition: transform 0.5s linear;
+}
+
+.circle-container:hover::before {
+  animation: rotate 1s linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
